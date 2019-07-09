@@ -1,0 +1,7 @@
+https://getbootstrap.com
+https://jquery.com
+https://www.youtube.com/channel/UCFCDiQFrqj5zPMQnV-2zO2A
+https://www.youtube.com/watch?v=KztguyUaLIQ&t=429s
+https://www.youtube.com/watch?v=TiWUTJIYtjs
+
+// maaf buk hosting sama upload file di github masih dalam proses, akun githubnya eror

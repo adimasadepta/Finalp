@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css">
+
+    <title>login_login</title>
+    <script type="text/javascript" src="assets/jquery/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="assets/jquery/jquery.validate.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+  <script type="text/javascript">
+    $.validator.setDefaults( {
+      submitHandler: function () {
+        action();
+      }
+    } );
+
+    $( document ).ready( function () {
+      $( "#signupForm" ).validate( {
+        rules: {
+          username: {
+            required: true,
+          },
+          password: {
+            required: true,
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          agree: "required"
+        },
+        messages: {
+          password: {
+            required: "Masukkan password",
+          },
+          email: "Masukkan email",
+        },
+        errorElement: "em",
+        errorPlacement: function ( error, element ) {
+          // Add the `help-block` class to the error element
+          error.addClass( "help-block" );
+
+          if ( element.prop( "type" ) === "" ) {
+            error.insertAfter( element.parent( "label" ) );
+          } else {
+            error.insertAfter( element );
+          }
+        },
+        highlight: function ( element, errorClass, validClass ) {
+          $( element ).parents( ".col-sm-12" ).addClass( "has-error" ).removeClass( "has-success" );
+        },
+        unhighlight: function (element, errorClass, validClass) {
+          $( element ).parents( ".col-sm-12" ).addClass( "has-success" ).removeClass( "has-error" );
+        }
+      } );
+    } );
+  </script>
+
+  <style type="text/css">
+    body{
+        background-color: #E5E8E8;
+      }
+    .col-md-6 {
+      background-color: white;
+      margin-top: 10%;
+      box-shadow: 0 3px 20px rgba(0,0,0,0.3);
+      padding: 40px;
+      }
+    .btn {
+      width: 49.5%;
+      margin-top: 20px;
+      }
+  </style>
+
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h4 class="text-center">Login</h4>
+      <hr>
+
+      <form id="signupForm" method="post" class="form-horizontal" action="index.html">
+        <div class="form-grup">
+          <label class="col-sm-4 control-label" for="email">Email</label>
+
+              <div class="col-sm-12">
+              <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+              </div>
+          </div>
+
+          <div class="form-grup">
+            <label class="col-sm-4 control-label mt-4" for="password">Password</label>
+              <div class="col-sm-12">
+              <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+              </div>
+          </div>
+
+          <div class="g-recaptcha mt-2" data-sitekey="6LcThqsUAAAAAK7qRu-59IhE3L8XCHp9eqd0k2XP"></div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-danger" name="signup" value="Sign up">Masuk</button>
+            <a href="login_daftar.html" class="btn btn-info">Daftar</a>
+          </div>
+
+           
+      </form>
+
+      </div>  
+    </div>
+</div>
+        
+  
+</body>
+</html>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
